@@ -12,7 +12,7 @@
         src: expense.conf
         dest: /etc/nginx/default.d/expense.conf
 
-    - name: Clear the old content
+    - name: Clean the old content
       ansible.builtin.file:
         path: /usr/share/nginx/html
         state: absent
@@ -28,7 +28,7 @@
         dest: /usr/share/nginx/html
         remote_src: yes
 
-    - name: Start Nginx Service
+    - name: Start Nginx
       ansible.builtin.systemd_service:
         state: restarted
         name: nginx
