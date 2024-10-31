@@ -1,0 +1,4 @@
+- name: Demo on vars
+  hosts: localhost
+  tasks:
+    - msg: Print Hello
